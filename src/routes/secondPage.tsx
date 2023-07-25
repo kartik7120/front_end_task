@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 export default function SecondPage() {
     return (
         <div>
             <h1>Second Page</h1>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
         </div>
     )
 }

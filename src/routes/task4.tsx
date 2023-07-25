@@ -1,5 +1,6 @@
 import { Box, Checkbox, FormControlLabel } from "@mui/material";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Task4() {
 
@@ -71,7 +72,7 @@ export default function Task4() {
           <FormControlLabel control={<Checkbox checked={parentChecked2} onChange={handleParentChange2} />} label="design" />
           {children2}
         </div>
-        <a href="/" className="text-center">Home page</a>
+        <Link to='/' className="text-center">Home page</Link>
       </div>
     </>
   )
