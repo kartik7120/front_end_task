@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import {
-  createBrowserRouter,
   RouterProvider,
+  createHashRouter
 } from "react-router-dom";
 import ErrorPage from "./routes/error-page.tsx";
 import ProtectedRoute from "./routes/ProtectedRoute.tsx";
@@ -15,7 +15,7 @@ import Tasks3 from './routes/tasks3.tsx';
 import Task4 from './routes/task4.tsx';
 import Task2 from './routes/Task2.tsx';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
