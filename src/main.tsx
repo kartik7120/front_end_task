@@ -4,7 +4,7 @@ import App from './App.tsx'
 import './index.css'
 import {
   RouterProvider,
-  createHashRouter
+  createBrowserRouter,
 } from "react-router-dom";
 import ErrorPage from "./routes/error-page.tsx";
 import ProtectedRoute from "./routes/ProtectedRoute.tsx";
@@ -15,7 +15,7 @@ import Tasks3 from './routes/tasks3.tsx';
 import Task4 from './routes/task4.tsx';
 import Task2 from './routes/Task2.tsx';
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
@@ -52,7 +52,7 @@ const router = createHashRouter([
     element: <Task2 />,
     errorElement: <ErrorPage />,
   }
-]);
+], { basename: import.meta.env.DEV ? '/' : '/front_end_task' });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
